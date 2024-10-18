@@ -1,6 +1,3 @@
-
-
-
 /* Estils globals */
 * {
     margin: 0;
@@ -14,7 +11,7 @@ body {
 }
 
 .capcalera {
-    background-color: #2d5c0b; /* Color més fosc per més contrast */
+    background-color: #2d5c0b; /* Color m&eacute;s fosc per m&eacute;s contrast */
     color: white;
     padding: 10px 0;
 }
@@ -38,11 +35,11 @@ body {
 }
 
 .area-privada::before {
-    content: "?? ";
+    content: "&#128100; ";
 }
 
 .contacte::before {
-    content: "?? ";
+    content: "&#128222; ";
 }
 
 .segona-franja {
@@ -73,17 +70,17 @@ body {
 
 .menu-navegacio a {
     text-decoration: none;
-    color: #444; /* Color més fosc per millor llegibilitat */
+    color: #444; /* Color m&eacute;s fosc per millor llegibilitat */
     font-weight: 600;
     font-size: 16px;
 }
 
 .menu-navegacio a:hover {
     border-bottom: 4px solid #C00000;
-    color: #C00000; /* Canviar també el color del text en hover */
+    color: #C00000; /* Canviar tamb&eacute; el color del text en hover */
 }
 
-/* Cos principal de la pàgina */
+/* Cos principal de la p&agrave;gina */
 .cos-principal {
     display: flex;
     justify-content: space-between;
@@ -112,7 +109,7 @@ body {
     background-color: #b0cba3;
 }
 
-/* Estils per al menú desplegable */
+/* Estils per al men&uacute; desplegable */
 .col-esquerra label, .col-centre label {
     display: block;
     margin-bottom: 5px;
@@ -155,7 +152,7 @@ body {
     background-color: #8aa76b;
 }
 
-/* Àrea d'edició */
+/* &Agrave;rea d'edició */
 #editor {
     min-height: 300px;
     padding: 10px;
@@ -183,7 +180,7 @@ body {
     background-color: #a6c295;
 }
 
-/* Secció de versions de documents */
+/* Secci&oacute; de versions de documents */
 .versions-container {
     padding: 15px;
     background-color: #e6f0dc;
@@ -202,3 +199,4 @@ body {
     border: 1px solid #89ac76;
     border-radius: 5px;
 }
+
