@@ -35,11 +35,11 @@ body {
 }
 
 .area-privada::before {
-    content: "&#x1f170; ";
+    content: "; ";
 }
 
 .contacte::before {
-    content: "&#x260e; ";
+    content: "; ";
 }
 
 .segona-franja {
