@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P&agrave;gina Web amb Editor de Text</title>
+    <title>Index.IA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <div class="primera-franja">
             <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/BN/Presidencia/gencat_cat_blanc.png" alt="Logotip de la Generalitat de Catalunya" class="logotip">
             <div class="enllacos">
-                <a href="#" class="area-privada">&Agrave;rea privada</a>
+                <a href="#" class="area-privada">Àrea privada</a>
                 <a href="#" class="contacte">Ajuda</a>
             </div>
         </div>
@@ -34,20 +34,20 @@
             <label for="menu-desplegable">Opcions:</label>
             <select name="menu-desplegable" id="menu-desplegable">
                 <option value="crear-espai">Crea un espai</option>
-                <option value="crear-procediment">Crea un proc&eacute;s</option>
-                <option value="editar-espai-proc&eacute;s">Editar un espai/proc&eacute;s</option>
+                <option value="crear-procediment">Crea un procés</option>
+                <option value="editar-espai-proc&eacute;s">Editar un espai/procés</option>
             </select>
 
             <label for="menu-publicar">Publicar:</label>
             <select name="menu-publicar" id="menu-publicar" onchange="gestionarPublicacio(this.value)">
-                <option value="">--Selecciona una opci&oacute;--</option>
+                <option value="">--Selecciona una opció--</option>
                 <option value="base-coneixement">Base de Coneixement</option>
-                <option value="cataleg">Cat&agrave;leg</option>
+                <option value="cataleg">Catàleg</option>
             </select>
 
             <label for="menu-exportacio">Exportar:</label>
             <select name="menu-exportacio" id="menu-exportacio" onchange="exportar(this.value)">
-                <option value="">--Selecciona una opci&oacute;--</option>
+                <option value="">--Selecciona una opció--</option>
                 <option value="word">Document Word</option>
                 <option value="pdf">Document PDF</option>
                 <option value="html">Document HTML</option>
@@ -69,9 +69,9 @@
                     <span id="icona-publicacio"></span>
                 </div>
                 <div id="editor" contenteditable="true" aria-label="Editor de text">
-                    <article><p>Escriu el teu document aqu&iacute;...</p></article>
+                    <article><p>Escriu el teu document aquí...</p></article>
                 </div>
-                <button id="guardar" onclick="desarContingut()">Desar com a fitxer</button>
+                <button id="guardar" onclick="desarContingut()">Desar</button>
             </div>
 
             <div class="metadades-container">
@@ -105,10 +105,10 @@
 
             <h3>Plantilles disponibles:</h3>
             <div id="llista-plantilles">
-                <div class="banner" onclick="carregarPlantilla('informe')">Plantilla d&rsquo;Informe</div>
+                <div class="banner" onclick="carregarPlantilla('informe')">Plantilla d'Informe</div>
                 <div class="banner" onclick="carregarPlantilla('ofici')">Plantilla d'Ofici</div>
-                <div class="banner" onclick="carregarPlantilla('resolucio')">Plantilla de Resoluci&oacute;</div>
-                <div class="banner" onclick="carregarPlantilla('acta')">Plantilla d&rsquo;Acta d&rsquo;inspecci&oacute;</div>
+                <div class="banner" onclick="carregarPlantilla('resolucio')">Plantilla de Resolució</div>
+                <div class="banner" onclick="carregarPlantilla('acta')">Plantilla d'Acta d'inspecció</div>
                 <div class="banner" onclick="carregarPlantilla('requeriment')">Plantilla de Requeriment</div>
                 <div class="banner" onclick="carregarPlantilla('carta')">Plantilla de Carta</div>
 
@@ -118,9 +118,9 @@
             <h3>Versions dels Documents:</h3>
             <div class="versions-container">
                 <ul id="llista-versions">
-                    <li>Document versi&oacute; 1</li>
-                    <li>Document versi&oacute; 2</li>
-                    <li>Document versi&oacute; 3</li>
+                    <li>Document versió 1</li>
+                    <li>Document versió 2</li>
+                    <li>Document versió 3</li>
                 </ul>
             </div>
         </section>
