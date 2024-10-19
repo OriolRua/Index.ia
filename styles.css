@@ -200,3 +200,55 @@ body {
     border-radius: 5px;
 }
 
+
+/* Estil per al cercador gran */
+.cercador-seccio {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cercador-gran {
+    width: 60%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #89ac76;
+}
+
+/* Estil per a les seccions de la pàgina Inici */
+.seccions-inici {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.seccio {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.seccio h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.banners {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    background-color: #b0cba3;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #89ac76;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner:hover {
+    background-color: #a6c295;
+}
