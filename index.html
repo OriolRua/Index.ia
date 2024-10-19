@@ -9,14 +9,14 @@
 <body>
     <header class="capcalera">
         <div class="primera-franja">
-            <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/BN/Presidencia/gencat_cat_blanc.png" alt="Logotip Generalitat" class="logotip">
+            <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/BN/Presidencia/gencat_cat_blanc.png" alt="Logotip de la Generalitat de Catalunya" style="width: 50%; height: 50%;" class="logotip">
             <div class="enllacos">
-                <a href="#" class="area-privada">Àrea privada</a>
-                <a href="#" class="contacte">Ajuda</a>
+                <a href="index.html" class="area-privada">Crea</a>
+                <a href="" class="contacte">Ajuda</a>
             </div>
         </div>
         <div class="segona-franja">
-            <h1 class="titol-web">Index.IA</h1>
+            <h1 class="titol-web">Index.IA - Inici</h1>
         </div>
         <nav class="tercera-franja">
             <ul class="menu-navegacio">
@@ -24,11 +24,11 @@
                 <li><a href="index.html">Crea</a></li>
                 <li><a href="#">Espais</a></li>
                 <li><a href="#">Cataleg</a></li>
-                <li><a href="#">Contacte</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">Equip</a></li>
             </ul>
         </nav>
     </header>
-
     
     <main class="cos-principal">
         <section class="col-esquerra">
@@ -53,7 +53,6 @@
                 <option value="pdf">a document PDF</option>
                 <option value="html">a document HTML</option>
             </select>
-
         </section>
         
         <section class="col-centre">
@@ -70,137 +69,4 @@
                     
                     <span id="icona-publicacio"></span>
                 </div>
-                <div id="editor" contenteditable="true" aria-label="Editor de text">
-                    <article><p>Escriu el teu document aqui...</p></article>
-                </div>
-                <button id="guardar" onclick="desarContingut()">Desar</button>
-            </div>
-
-            <div class="metadades-container">
-                <h3>Metadades</h3>
-                <div class="metadades-grid">
-                    <div>
-                        <label for="nom-document">Nom:</label>
-                        <input type="text" id="nom-document" name="nom-document">
-                    </div>
-                    <div>
-                        <label for="tipus-document">Tipus:</label>
-                        <input type="text" id="tipus-document" name="tipus-document">
-                    </div>
-                    <div>
-                        <label for="autor-document">Autor:</label>
-                        <input type="text" id="autor-document" name="autor-document">
-                    </div>
-                    <div>
-                        <label for="notes-document">Notes:</label>
-                        <textarea id="notes-document" name="notes-document" rows="3"></textarea>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="col-dreta">
-            <div class="cercador-plantilles">
-                <h3>Cerca Plantilles</h3>
-                <input type="text" id="cercador" onkeyup="filtrarPlantilles()" placeholder="Cerca plantilles...">
-            </div>
-
-            <h3>Plantilles disponibles:</h3>
-            <div id="llista-plantilles">
-                <div class="banner" onclick="carregarPlantilla('informe')">Plantilla d'Informe</div>
-                <div class="banner" onclick="carregarPlantilla('ofici')">Plantilla d'Ofici</div>
-                <div class="banner" onclick="carregarPlantilla('resolucio')">Plantilla de Resolucio</div>
-                <div class="banner" onclick="carregarPlantilla('acta')">Plantilla d'Acta d'inspeccio</div>
-                <div class="banner" onclick="carregarPlantilla('requeriment')">Plantilla de Requeriment</div>
-                <div class="banner" onclick="carregarPlantilla('carta')">Plantilla de Carta</div>
-
-            </div>
-
-            <!-- Requadre de versions de documents -->
-            <h3>Versions dels Documents:</h3>
-            <div class="versions-container">
-                <ul id="llista-versions">
-                    <li>Document vers-1</li>
-                    <li>Document vers-2</li>
-                    <li>Document vers-3</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        function carregarPlantilla(tipus) {
-            let editor = document.getElementById('editor');
-            if (tipus === 'informe') {
-                editor.innerHTML = '<h2>Plantilla d&rsquo;Informe</h2><p>Aquesta &eacute;s una plantilla per a un informe oficial. Afegeix aqu&iacute; el contingut necessari...</p>';
-            } else if (tipus === 'ofici') {
-                editor.innerHTML = '<h2>Plantilla d\'Ofici</h2><p>Aquesta &eacute;s una plantilla per a un ofici oficial. Afegeix aqu&iacute; el contingut necessari...</p>';
-            } else if (tipus === 'resolucio') {
-                editor.innerHTML = '<h2>Plantilla de Resoluci&oacute;</h2><p>Aquesta &eacute;s una plantilla per a una resoluci&oacute; oficial. Afegeix aqu&iacute; el contingut necessari...</p>';
-            }
-        }
-
-        function desarContingut() {
-            const text = document.getElementById('editor').innerHTML;
-            const blob = new Blob([text], { type: 'text/html' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'document.html';
-            a.click();
-        }
-
-        function canviarColorText(color) {
-            document.execCommand('foreColor', false, color);
-        }
-
-        function exportar(tipus) {
-            let editorContent = document.getElementById('editor').innerHTML;
-            if (tipus === 'word') {
-                let blob = new Blob([editorContent], { type: 'application/msword' });
-                let link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'document.docx';
-                link.click();
-            } else if (tipus === 'pdf') {
-                alert("Exportar a PDF no est&agrave; implementat.");
-            } else if (tipus === 'html') {
-                let blob = new Blob([editorContent], { type: 'text/html' });
-                let link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'document.html';
-                link.click();
-            }
-        }
-
-        function gestionarPublicacio(tipus) {
-            let editor = document.getElementById('editor');
-            let iconaPublicacio = document.getElementById('icona-publicacio');
-            iconaPublicacio.innerHTML = "";
-
-            if (tipus === 'base-coneixement') {
-                editor.style.backgroundColor = '#f0f0f0';
-                iconaPublicacio.innerHTML = '<span style="background-color: #006400; color: white; padding: 5px; border-radius: 3px;">BdC</span>';
-            } else if (tipus === 'cataleg') {
-                editor.style.backgroundColor = '';
-                iconaPublicacio.innerHTML = '<span style="background-color: #d7ff5b; padding: 5px; border-radius: 3px;">Pendent de validar</span>';
-            }
-        }
-
-        function filtrarPlantilles() {
-            let input = document.getElementById('cercador');
-            let filter = input.value.toLowerCase();
-            let plantilles = document.getElementById('llista-plantilles').getElementsByClassName('banner');
-            
-            for (let i = 0; i < plantilles.length; i++) {
-                let plantilla = plantilles[i];
-                let text = plantilla.textContent || plantilla.innerText;
-                if (text.toLowerCase().indexOf(filter) > -1) {
-                    plantilla.style.display = "";
-                } else {
-                    plantilla.style.display = "none";
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+                <
