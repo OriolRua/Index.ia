@@ -1,3 +1,4 @@
+
 /* Estils globals */
 * {
     margin: 0;
@@ -11,7 +12,7 @@ body {
 }
 
 .capcalera {
-    background-color: #2d5c0b; /* Color m&eacute;s fosc per m&eacute;s contrast */
+    background-color: #568203;
     color: white;
     padding: 10px 0;
 }
@@ -24,7 +25,8 @@ body {
 }
 
 .logotip {
-    height: 50px;
+    width: 50%;
+    height: 50%;
 }
 
 .enllacos a {
@@ -35,11 +37,11 @@ body {
 }
 
 .area-privada::before {
-    content: "";
+    content: "?? ";
 }
 
 .contacte::before {
-    content: "";
+    content: "?? ";
 }
 
 .segona-franja {
@@ -70,17 +72,16 @@ body {
 
 .menu-navegacio a {
     text-decoration: none;
-    color: #444; /* Color m&eacute;s fosc per millor llegibilitat */
+    color: #333333;
     font-weight: 600;
     font-size: 16px;
 }
 
 .menu-navegacio a:hover {
     border-bottom: 4px solid #C00000;
-    color: #C00000; /* Canviar tamb&eacute; el color del text en hover */
 }
 
-/* Cos principal de la p&agrave;gina */
+/* Cos principal de la pàgina */
 .cos-principal {
     display: flex;
     justify-content: space-between;
@@ -90,32 +91,32 @@ body {
 
 .col-esquerra, .col-centre, .col-dreta {
     padding: 10px;
-    background-color: #d1e4c2;
+    background-color: #d1e4c2; /* Color derivat de #89ac76 */
 }
 
+/* Mides de les columnes */
 .col-esquerra {
-    flex: 1;
-    background-color: #b0cba3;
+    flex: 1; /* 1/5 del total */
+    background-color: #b0cba3; /* Color derivat de #89ac76 */
 }
 
 .col-centre {
-    flex: 3;
+    flex: 3; /* 3/5 del total */
     background-color: #ffffff;
-    margin-bottom: 20px;
 }
 
 .col-dreta {
-    flex: 1;
-    background-color: #b0cba3;
+    flex: 1; /* 1/5 del total */
+    background-color: #b0cba3; /* Color derivat de #89ac76 */
 }
 
-/* Estils per al men&uacute; desplegable */
-.col-esquerra label, .col-centre label {
-    display: block;
-    margin-bottom: 5px;
+/* Estils per al menú desplegable */
+.col-esquerra h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-#menu-desplegable, #menu-publicar, #menu-exportacio {
+#menu-desplegable {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -130,7 +131,7 @@ body {
     border: 1px solid #89ac76;
     border-radius: 5px;
     padding: 10px;
-    background-color: #e6f0dc;
+    background-color: #e6f0dc; /* Color clar derivat de #89ac76 */
 }
 
 /* Barra d'eines */
@@ -139,20 +140,20 @@ body {
 }
 
 .barra-eines button {
-    padding: 8px 12px; /* Augmentar el padding per millorar l'espaiat */
-    margin-right: 10px;
+    padding: 5px 10px;
+    margin-right: 5px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #c2dbb0;
+    background-color: #c2dbb0; /* Color derivat de #89ac76 */
     border: none;
     border-radius: 3px;
 }
 
 .barra-eines button:hover {
-    background-color: #8aa76b;
+    background-color: #a6c295; /* Color derivat de #89ac76 */
 }
 
-/* &Agrave;rea d'edició */
+/* Àrea d'edició */
 #editor {
     min-height: 300px;
     padding: 10px;
@@ -163,10 +164,15 @@ body {
 }
 
 /* Estils per als banners de plantilles */
+.col-dreta {
+    padding: 20px;
+    background-color: #e6f0dc; /* Color clar derivat de #89ac76 */
+}
+
 .banner {
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #b0cba3;
+    background-color: #b0cba3; /* Color derivat de #89ac76 */
     border: 1px solid #89ac76;
     border-radius: 5px;
     text-align: center;
@@ -177,43 +183,9 @@ body {
 }
 
 .banner:hover {
-    background-color: #a6c295;
+    background-color: #a6c295; /* Color derivat de #89ac76 */
 }
 
-/* Secci&oacute; de versions de documents */
-.versions-container {
-    padding: 15px;
-    background-color: #e6f0dc;
-    border: 1px solid #89ac76;
-    border-radius: 5px;
-}
-
-.versions-container ul {
-    list-style: none;
-}
-
-.versions-container li {
-    padding: 10px;
-    background-color: #b0cba3;
-    margin-bottom: 5px;
-    border: 1px solid #89ac76;
-    border-radius: 5px;
-}
-
-
-/* Estil per al cercador gran */
-.cercador-seccio {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.cercador-gran {
-    width: 60%;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: 1px solid #89ac76;
-}
 
 /* Estil per a les seccions de la pàgina Inici */
 .seccions-inici {
